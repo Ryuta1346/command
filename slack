@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+if [ $# = 0 ]; then 
+  echo 'you have to add a text at least one or more.'
+  exit 1
+fi
+
+. ./.env
+curl -X POST --data-urlencode "payload={\"channel\": \"$CHANNEL\", \"username\": \"$USERNAME\", \"text\": \"$TEXT\", \"icon_url\": \"$ICON\"}" $WEBHOOK_URL
