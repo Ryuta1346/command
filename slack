@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 if [ $# = 0 ]; then 
   echo 'you have to add a text at least one or more.'
   exit 1
