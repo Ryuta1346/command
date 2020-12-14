@@ -4,5 +4,5 @@ if [ $# = 0 ]; then
   exit 1
 fi
 
-source ./.env
+source ~/command/.env
 curl -X POST --data-urlencode "payload={\"channel\": \"$CHANNEL\", \"username\": \"$USERNAME\", \"text\": \"$TEXT\", \"icon_url\": \"$ICON\"}" $WEBHOOK_URL
